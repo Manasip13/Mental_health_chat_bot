@@ -96,7 +96,7 @@ st.markdown('<div class="header">🧠 Mental Health AI Bot</div>', unsafe_allow_
 if "messages" not in st.session_state:
     # Start with a welcome message from the AI assistant
     st.session_state.messages = [
-        {"role": "assistant", "content": "Hello! 😊 I'm your AI Friend. you can freely share your feelings with me. How are you feeling today?"}
+        {"role": "assistant", "content": "Hello! 😊 I'm your AI Friend. You can freely share your feelings with me. How are you feeling today?"}
     ]
 
 # ===========================
