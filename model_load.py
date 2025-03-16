@@ -6,11 +6,11 @@ from huggingface_hub import login
 
 # Load API key from .env file
 load_dotenv()
-# API_KEY = os.getenv("HF_API_KEY")  # Retrieve the API key from the environment variables
-API_KEY=st.secrets["HF_API_KEY"]
-login(token=API_KEY)
-# Initialize Hugging Face Inference Client using the API key
-# client = InferenceClient(api_key=API_KEY)
+API_KEY = st.secrets("HF_API_KEY")
+
+# Initialize Hugging Face Inference Client
+client = InferenceClient(api_key=API_KEY)
+
 
 
 
