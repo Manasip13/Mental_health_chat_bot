@@ -1,13 +1,18 @@
 import os
 from huggingface_hub import InferenceClient  # Import the Hugging Face inference client
 from dotenv import load_dotenv  # Import dotenv to load API keys securely
+from huggingface_hub import login
+
 
 # Load API key from .env file
 load_dotenv()
-API_KEY = os.getenv("HF_API_KEY")  # Retrieve the API key from the environment variables
-
+# API_KEY = os.getenv("HF_API_KEY")  # Retrieve the API key from the environment variables
+API_KEY=st.secrets["HF_API_KEY"]
+login(token=API_KEY)
 # Initialize Hugging Face Inference Client using the API key
-client = InferenceClient(api_key=API_KEY)
+# client = InferenceClient(api_key=API_KEY)
+
+
 
 def get_response(user_input):
     """
