@@ -2,6 +2,7 @@ import os
 from huggingface_hub import InferenceClient  # Import the Hugging Face inference client
 from dotenv import load_dotenv  # Import dotenv to load API keys securely
 from huggingface_hub import login
+import streamlit as st
 
 
 # Load API key from .env file
