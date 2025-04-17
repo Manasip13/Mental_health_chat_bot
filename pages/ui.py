@@ -44,7 +44,7 @@ st.markdown("""
 col1, col2 = st.columns([4, 6], gap="large")
 
 # ---------------- LEFT PANEL (Fixed) ---------------- #
-with col1:
+"""with col1:
     # st.subheader("Mental Health Chatbot")
     
     st.markdown("""
@@ -59,7 +59,7 @@ with col1:
                 <li>🧘 Relaxation Exercises</li>
             </ul>
         </div>
-    """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)"""
 
 # ---------------- RIGHT PANEL (Chat UI) ---------------- #
 with col2:
