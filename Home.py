@@ -41,6 +41,18 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
+# 👇 New CSS for resizing the Start Chat button
+st.markdown("""
+    <style>
+    button[kind="primary"] {
+        font-size: 1.2em !important;
+        padding: 0.75em 2em !important;
+        border-radius: 10px !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# Hide sidebar and navigation controls
 st.markdown("""
     <style>
     [data-testid="stSidebar"] {
@@ -67,7 +79,6 @@ st.markdown("""
     </h1>
 """, unsafe_allow_html=True)
 
-
 # Centered Start Button
 st.markdown('<div class="center-button">', unsafe_allow_html=True)
 if st.button("🟢 Start Chat"):
@@ -81,7 +92,6 @@ st.markdown("""
         🤝 Meet the Team
     </h2>
 """, unsafe_allow_html=True)
-
 
 # Team Member Cards
 col1, col2, col3, col4 = st.columns(4)
