@@ -41,13 +41,13 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
-# 👇 New CSS for resizing the Start Chat button
+# 🔥 Enlarged Button Styling
 st.markdown("""
     <style>
     button[kind="primary"] {
-        font-size: 1.2em !important;
-        padding: 0.75em 2em !important;
-        border-radius: 10px !important;
+        font-size: 1.8em !important;
+        padding: 1em 3em !important;
+        border-radius: 14px !important;
     }
     </style>
 """, unsafe_allow_html=True)
