@@ -87,7 +87,7 @@ st.markdown('<div class="button-container"> <div class="custom-button">', unsafe
 # Create the button and define its action
 left, middle, right = st.columns(3)
 if middle.button("🟢 Start Chat",use_container_width=True):
-    st.switch_page("pages\\ui.py")  # Redirect to the desired page on button click
+    st.switch_page("pages\ui.py")  # Redirect to the desired page on button click
 
 st.markdown('</div></div>', unsafe_allow_html=True)  # Close the div tags
 
