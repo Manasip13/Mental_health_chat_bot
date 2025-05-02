@@ -17,7 +17,8 @@ def get_response(user_input):
         messages = [{"role": "user", "content": user_input}]
 
         completion = client.chat.completions.create(
-            model="google/gemma-2-2b-it",
+            # model="google/gemma-2-2b-it",
+            model="google/gemma-3-1b-it",
             messages=messages,
             max_tokens=500
         )
