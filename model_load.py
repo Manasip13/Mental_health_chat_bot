@@ -18,7 +18,8 @@ def get_response(user_input):
 
         completion = client.chat.completions.create(
             # model="google/gemma-2-2b-it",
-            model="google/gemma-3-1b-it",
+            # model="google/gemma-3-1b-it",
+            model="mistralai/Mistral-7B-Instruct-v0.3"
             messages=messages,
             max_tokens=500
         )
