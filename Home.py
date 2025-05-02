@@ -17,17 +17,12 @@ bg_image = get_base64_of_bin_file("bg.jpg")
 st.markdown(f"""
     <style>
     .stApp {{
-        background-image: url("data:image/jpg;base64,{bg_image}");
+        background-image: url("data:image/jpg;base64,{bg_image}"); 
         background-size: 100%;
         background-repeat: no-repeat;
         background-attachment: fixed;
     }}
-    .center-button {{
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-        margin-bottom: 50px;
-    }}
+     
     .card {{
         background-color: rgba(255, 255, 255, 0.85);
         padding: 20px;
@@ -41,18 +36,7 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
-# 🔥 Enlarged Button Styling
-st.markdown("""
-    <style>
-    button[kind="primary"] {
-        font-size: 1.8em !important;
-        padding: 1em 3em !important;
-        border-radius: 14px !important;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
-# Hide sidebar and navigation controls
+# Hide the sidebar and collapsed control
 st.markdown("""
     <style>
     [data-testid="stSidebar"] {
@@ -79,11 +63,33 @@ st.markdown("""
     </h1>
 """, unsafe_allow_html=True)
 
-# Centered Start Button
-st.markdown('<div class="center-button">', unsafe_allow_html=True)
-if st.button("🟢 Start Chat"):
-    st.switch_page("pages/ui.py")
-st.markdown('</div>', unsafe_allow_html=True)
+# Custom CSS for centering and styling the button
+st.markdown("""
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        .button-container .custom-button > button {
+            font-size: 24px !important;
+            padding: 20px !important;
+            border-radius: 12px !important;
+            background-color: #00cc66 !important;
+            color: white !important;
+            width: 300px !important;  /* fixed width instead of full width */
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Wrap the button in both styling and centering divs
+st.markdown('<div class="button-container"> <div class="custom-button">', unsafe_allow_html=True)
+# Create the button and define its action
+left, middle, right = st.columns(3)
+if middle.button("🟢 Start Chat",use_container_width=True):
+    st.switch_page("pages\\ui.py")  # Redirect to the desired page on button click
+
+st.markdown('</div></div>', unsafe_allow_html=True)  # Close the div tags
 
 # Divider and Team Section
 st.markdown("---")
@@ -93,7 +99,7 @@ st.markdown("""
     </h2>
 """, unsafe_allow_html=True)
 
-# Team Member Cards
+# Team Member Cards in columns
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
